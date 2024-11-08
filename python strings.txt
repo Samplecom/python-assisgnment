@@ -1,0 +1,95 @@
+Q1. How can we store a single quote (‘) as a string in a variable?
+
+In Python, we can store a single quote (') in a string variable in a few ways
+1. Using double quotes
+
+text = "It's a beautiful day"
+print(text)
+
+2.Escaping with a backslash
+
+ text = 'It\'s a beautiful day'
+print(text)
+
+3.Using triple quotes
+
+  text = '''It's a beautiful day'''
+print(text)
+
+
+Q2. Refer the below variable:
+x = ‘a’
+Here, is x a character type or string type variable? Support your answer with an explanation.
+
+In Python, x in the statement x = 'a' is of string type, not a character type.
+
+Explanation
+In Python, there is no separate data type for single characters. Any text enclosed in single quotes (' ') or double quotes (" ") is treated as a string of type str, regardless of its length. So, even if x contains only one character ('a'), it is still considered a string.
+
+To verify this, we can check the type of x:
+
+python
+Copy code
+x = 'a'
+print(type(x))  # Output: <class 'str'>
+The output will show <class 'str'>, confirming that x is a string type.
+
+Q3. Apply the following functions on this variable: ‘Welcome to Python foundation course'
+SP find(0
+.P count(0
+?P len(0
+P Concatenation
+Note: You can use your choice of parameters. But make sure it is correct.
+
+
+text = 'Welcome to Python foundation course'
+
+find(): This method returns the index of the first occurrence of a specified substring. If the substring is not found, it returns -1.
+index = text.find('Python')
+print(index)  
+
+count(): This method counts the occurrences of a specified substring in the string.
+count = text.count('o')
+print(count)  # Output: 4 (since 'o' appears four times in the string)
+
+len(): This function returns the total number of characters in the string.
+length = len(text)
+print(length)  
+
+Concatenation: You can concatenate (join) the string with another string using the + operator.
+new_text = text + ' - Let’s start learning!'
+print(new_text)
+
+Q4. For the variable: word = ‘PanaJi@12256’
+Calculate the following:
+(a) Total number of alphabets in lowercase
+(b) Total number of alphabets in uppercase
+(c) Total number of numerical in string
+
+word = 'PanaJi@12256'
+
+lowercase_count = sum(1 for char in word if char.islower())
+uppercase_count = sum(1 for char in word if char.isupper())
+numeral_count = sum(1 for char in word if char.isdigit())
+
+
+print("Lowercase count:", lowercase_count)
+print("Uppercase count:", uppercase_count)
+print("Numeral count:", numeral_count)
+
+
+
+
+
+Write a code to store a numerical value inside a variable then convert it into string.
+
+
+num = 12345
+
+
+num_str = str(num)
+
+
+print(num_str)         # Output: '12345'
+print(type(num_str))   # Output: <class 'str'>
+
