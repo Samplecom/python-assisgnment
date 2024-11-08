@@ -1,0 +1,101 @@
+1.
+ 1. Variable Naming Rules
+Start with a letter or an underscore (_): A variable name must begin with either a letter (a-z, A-Z) or an underscore (_). It cannot start with a number.
+Example: name, _age, x1, but not 1x, @age.
+
+Followed by letters, numbers, and underscores: After the first character, the variable name can include any combination of letters (a-z, A-Z), numbers (0-9), and underscores (_).
+
+Example: name_1, myVariable, age_2023.
+No spaces: Variable names cannot contain spaces. Use underscores to separate words if necessary (e.g., my_variable).
+Example: not my variable, but my_variable.
+No special characters: Apart from underscores (_), variable names cannot include special characters like @, #, &, etc.
+Example: not my@var, not var#1.
+Case-sensitive: Python is case-sensitive, meaning variable, Variable, and VARIABLE are treated as three different variables.
+Example: x and X are different variables.
+
+2. Variable Naming Conventions (PEP 8)
+Python follows the PEP 8 style guide for variable names. Here are some key recommendations:
+
+Lowercase for variables: By convention, variable names should be written in lowercase letters. If the name consists of multiple words, separate them with underscores (snake_case).
+Example: my_variable, user_age, total_amount.
+Uppercase for constants: If the variable is a constant (a value that should not be changed), use uppercase letters and separate words with underscores.
+Example: PI, MAX_LIMIT, NUMBER_OF_USERS.
+Avoid using Python reserved words: Python has a set of reserved keywords (e.g., def, class, import, for, etc.) that cannot be used as variable names.
+Example: not def, not class.
+
+
+3. Descriptive Names
+Use meaningful and descriptive names for variables so that their purpose is clear. Avoid single-letter or ambiguous names unless in specific cases like loop counters.
+Example: age, total_price, user_name, not x, a, temp.
+
+4. Avoid Using Leading Underscores (Private Variables)
+Single leading underscore (_var): This is a convention to indicate that a variable is intended for internal use (i.e., it is "protected" and not part of the public API). This is more of a convention than an enforcement.
+Example: _internal_variable, _helper_function.
+Double leading underscore (__var): This triggers name mangling, making the variable name more difficult to accidentally access from outside the class. This is typically used for variables that should be considered "private."
+Example: __private_var.
+
+5. Avoid Using Double Underscore at the Start and End
+Double leading and trailing underscores (__var__): This naming style is reserved for special or "magic" methods and attributes in Python (e.g., __init__, __str__, __repr__). It is highly discouraged to use this for user-defined variables.
+Example: not __my_var__.
+
+6. Type Hints (Optional, but Recommended)
+While not strictly a naming convention, using type hints for variables helps with code clarity. Python is dynamically typed, but type hints are increasingly used for better documentation and error checking, especially in large codebases.
+Example: age: int = 30, name: str = "Alice".
+
+7. Avoid Global Variables (Where Possible)
+It's generally discouraged to use global variables unless absolutely necessary, as they can introduce unexpected side effects. If you must use global variables, make sure to declare them explicitly as global within functions.
+Example:
+python
+Copy code
+global_var = 10
+
+def update_global():
+    global global_var
+    global_var = 20
+
+8. Use Constants for Immutable Values
+For values that should remain constant throughout the program (e.g., configuration values, mathematical constants), use all uppercase letters with underscores for separation.
+Example: PI = 3.14159, MAX_RETRIES = 5.
+
+9. Avoid Shadowing Built-in Functions or Modules
+Do not use names that shadow or overwrite the names of Python built-in functions or modules (e.g., list, str, input, min).
+Example: not list = [1, 2, 3], not input = "user input".
+
+10. Variable Scope
+Local Variables: Defined within a function or block, and can only be used within that scope.
+
+
+
+
+**********************************
+2. 
+If you try to use a reserved keyword as a variable name, Python will raise a syntax error. This is because reserved keywords cannot be redefined or used as identifiers (such as variable names, function names, or class names) in Python.
+***********************************
+3. 
+No, in Python you cannot declare a string as a variable name.
+***************************
+4. 
+Yes, it is possible to declare _ (underscore) as a variable in Python. The underscore is often used as a placeholder or to represent an unused variable, but it can still hold a value like any other variable name.
+
+
+_ = 5;
+print(_);
+
+out put is 5
+**********************************************
+5.
+ In Python, variables are dynamic, meaning you don’t need to declare their types explicitly, and a variable’s type can change based on the value assigned to it. 
+
+
+x = 10       
+print(x)     
+print(type(x)) 
+
+x = "Hello"  
+print(x)   
+print(type(x)
+
+x = [1, 2, 3]  
+print(x)     
+print(type(x)) 
+
