@@ -1,0 +1,33 @@
+Q1. Create an empty list.
+
+empty_list = []
+Q2. Create a list and add an element to the end of this list.
+
+my_list = [1, 2, 3]
+my_list.append(4) 
+print(my_list)     
+Q3. For the above created list print the last element.
+
+print(my_list[-1])  
+Q4. Reverse the above created list.
+
+my_list.reverse()
+print(my_list)  
+Q5. Sort the above created list.
+
+my_list.sort()
+print(my_list)  
+Q6. Create a list of your top three favorite movies, then print the second movie title.
+
+favorite_movies = ["salar", "don", "amaran"]
+print(favorite_movies[1])  
+Q7. Create a list of your favorite animals, then add a new animal to the list and print the updated list.
+
+favorite_animals = ["Dog", "Cat", "Elephant"]
+favorite_animals.append("Lion")  
+print(favorite_animals)
+Q8. Create a list of your favorite cities, then use the index() method to find the position of a specific city in the list and print it.
+
+favorite_cities = ["Paris", "Tokyo", "New York", "London"]
+city_position = favorite_cities.index("Tokyo")
+print(city_position)  
